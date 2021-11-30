@@ -1,0 +1,67 @@
+~/test-1-Prajwal120602-3$ gcc -g p2original.c
+~/test-1-Prajwal120602-3$ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x722: file p2original.c, line 3.
+(gdb) i
+"info" must be followed by the name of an info command.
+List of info subcommands:
+
+info address -- Describe where symbol SYM is stored
+info all-registers -- List of all registers and their contents
+info args -- Argument variables of current stack frame
+info auto-load -- Print current status of auto-loaded files
+info auxv -- Display the inferior's auxiliary vector
+info bookmarks -- Status of user-settable bookmarks
+info breakpoints -- Status of specified breakpoints (all user-settable breakpoints if no argument)
+info checkpoints -- IDs of currently known checkpoints
+info classes -- All Objective-C classes
+info common -- Print out the values contained in a Fortran COMMON block
+info copying -- Conditions for redistributing copies of GDB
+info dcache -- Print information on the dcache performance
+info display -- Expressions to display when program stops
+info exceptions -- List all Ada exception names
+info extensions -- All filename extensions associated with a source language
+info files -- Names of targets and files being debugged
+info float -- Print the status of the floating point unit
+info frame -- All about selected stack frame
+---Type <return> to continue, or q <return> to quit---q
+Quit
+(gdb) n
+The program is not being run.
+(gdb) r
+Starting program: /home/runner/test-1-Prajwal120602-3/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the value of a and b");
+(gdb) s
+__printf (format=0x56301ce00824 "enter the value of a and b") at printf.c:28
+28  printf.c: No such file or directory.
+(gdb) p
+The history is empty.
+(gdb) c
+Continuing.
+enter the value of a and bcf
+22064+-1794330432=-1794308368[Inferior 1 (process 162) exited normally]
+(gdb) l
+23  in printf.c
+(gdb) quit
+~/test-1-Prajwal120602-3$ ^C
+~/test-1-Prajwal120602-3$ 
